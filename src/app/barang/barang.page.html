@@ -1,3 +1,16 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+  <style>
+    ion-content {
+      --background: #8888e3;
+       --background-image: url('D:\Semester 5\Prak Pem Mobile\ionicproject\sinau\src\assets\bg.jpg');
+      --background-attachment: fixed;
+      --background-position: center;
+    }
+  </style>
+</head>
+
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>Aplikasi Kelola Barang</ion-title>
@@ -22,8 +35,14 @@ dataBarang">
         {{item.nama}}
         <p>Stok: {{item.stok}}</p>
       </ion-label>
-      <ion-button color="warning" expand="block" (click)="open_modal_edit(true,item.id)">Edit</ion-button>
-      <ion-button color="danger" slot="end" (click)="hapusBarang(item.id)">Hapus</ion-button>
+      <ion-button color="warning" expand="block" (click)="open_modal_edit(true,item.id)">
+        <ion-icon name="create-outline">
+        </ion-icon>Edit
+      </ion-button>
+      <ion-button color="danger" slot="end" (click)="hapusBarang(item.id)">
+        <ion-icon name="close-circle-outline">
+        </ion-icon>Hapus
+      </ion-button>
     </ion-item>
   </ion-card>
 </ion-content>
