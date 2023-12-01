@@ -1,0 +1,7 @@
+{
+  "name": "kelolabarang",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
